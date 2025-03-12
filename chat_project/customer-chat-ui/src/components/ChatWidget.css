@@ -1,0 +1,87 @@
+/* Main container for the chat widget */
+.chat-widget {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 350px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Messages area */
+.messages {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Individual message styling */
+.message {
+    padding: 8px 12px;
+    border-radius: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+/* User message */
+.message.user {
+    align-self: flex-end;
+    background-color: #0078d4;
+    color: white;
+}
+
+/* Bot message */
+.message.bot {
+    align-self: flex-start;
+    background-color: #e5e5e5;
+    color: #333;
+}
+
+/* Representative message */
+.message.rep {
+    align-self: flex-start;
+    background-color: #ffedd9;
+    color: #333;
+}
+
+/* Footer area containing input and buttons */
+.chat-widget-footer {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    background-color: #fff;
+}
+
+/* Chat input area */
+.chat-widget-footer input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 14px;
+    flex-grow: 1;
+    margin-right: 8px;
+}
+
+/* Buttons */
+.chat-widget-footer button {
+    border: none;
+    background-color: #0078d4;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.chat-widget-footer button:hover {
+    background-color: #005bb5;
+}

@@ -1,0 +1,100 @@
+/* Main chat container */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  align-items: center; /* Horizontally centers the content */
+  justify-content: flex-start; /* Ensures content aligns to the top */
+  padding: 10px;
+  width: 60%; /* Control the width of the chat window */
+  margin: 0 auto; /* Centers the chat container horizontally */
+  height: 80%; /* Adjust height for the chat window */
+}
+
+/* Container that holds the inbox and chat window */
+.container {
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full height of the viewport */
+  background-color: #f3f3f3;
+  width: 100%; /* Ensures the container spans the full width */
+}
+
+/* Messages area */
+.chat-container .messages {
+  flex: 1;
+  width: 100%; /* Messages will take up the full width of the container */
+  padding: 15px;
+  overflow-y: auto;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the messages inside the container */
+}
+
+/* Individual message */
+.chat-container .messages .message {
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  max-width: 80%; /* Adjust this to control the message bubble width */
+  word-wrap: break-word;
+  display: inline-block;
+}
+
+/* Sent messages (from the representative) */
+.chat-container .messages .message.sent {
+  background-color: #0078d4;
+  color: white;
+  align-self: center; /* Centers the representative's messages */
+}
+
+/* Received messages (from the customer) */
+.chat-container .messages .message.received {
+  background-color: #e6e6e6;
+  color: #333;
+  align-self: flex-start; /* Left-align customer messages */
+}
+
+/* Footer with input and button */
+.chat-container footer {
+  width: 100%; /* Ensure the footer spans the full width */
+  padding: 10px 15px;
+  border-top: 1px solid #ddd;
+  background-color: #ececec;
+  display: flex;
+  gap: 10px;
+  justify-content: center; /* Centers the input and button horizontally */
+}
+
+.chat-container footer input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  width: 60%; /* Control the width of the input */
+}
+
+.chat-container footer button {
+  padding: 8px 12px;
+  background-color: #0078d4;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.chat-container footer button:hover {
+  background-color: #005bb5;
+}
+
+.chat-container header
+{
+  background-color: #0078d4;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+}

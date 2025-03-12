@@ -1,0 +1,137 @@
+/* Main container for the chat widget */
+.chat-widget {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 350px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f9f9f9;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+
+  /* Ensure the widget is centered horizontally in its container */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Messages area */
+.messages {
+  flex-grow: 1;
+  padding: 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* Scrollbar customization */
+  scrollbar-width: thin;
+  scrollbar-color: #ccc #f9f9f9;
+}
+
+/* Individual message styling */
+.message {
+  padding: 8px 12px;
+  border-radius: 10px;
+  max-width: 80%;
+  word-wrap: break-word;
+  display: inline-block;
+}
+
+/* Message from the user (rep) */
+.message.rep {
+  align-self: flex-end;
+  background-color: #0078d4; /* Blue for Representative */
+  color: white;
+}
+
+/* Bot message */
+.message.bot {
+  align-self: flex-start;
+  background-color: #4caf50; /* Green for Bot */
+  color: white;
+}
+
+/* Customer message */
+.message.customer {
+  align-self: flex-start;
+  background-color: #e5e5e5; /* Gray for Customer */
+  color: #333;
+}
+
+/* Footer area containing input and buttons */
+footer {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  /* Center the footer items */
+}
+
+/* Chat input area */
+footer input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 14px;
+  flex-grow: 1;
+  margin-right: 8px;
+}
+
+/* Send button */
+footer button {
+  border: none;
+  background-color: #0078d4;
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+footer button:hover {
+  background-color: #005bb5;
+}
+
+/* Ensure smooth scroll to the latest message */
+.messages::-webkit-scrollbar {
+  width: 8px;
+}
+
+.messages::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+/* Message from the rep (aligned to the right) */
+.message.rep {
+  align-self: flex-end;
+  background-color: #0078d4; /* Blue for Representative */
+  color: white;
+}
+
+/* Styling for the message area when no messages exist */
+.messages p {
+  color: #888;
+  font-style: italic;
+  text-align: center;
+}
+
+/* Ref that makes sure messages scroll to the bottom */
+div::-webkit-scrollbar {
+  display: none;
+}
+
+header {
+  background-color: #0078d4;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+}

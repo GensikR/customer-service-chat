@@ -1,0 +1,21 @@
+{
+  "projects": {
+    "default": "business-chat-88712"
+  },
+  "targets": {
+    "business-chat-88712": {
+      "hosting": {
+        "blog": [
+          "myapp-blog"
+        ],
+        "customer": [
+          "customer-chat-ui-69178"
+        ],
+        "rep": [
+          "rep-inbox-dashboard-88712"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
